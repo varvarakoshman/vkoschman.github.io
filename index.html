@@ -10,16 +10,17 @@
     <summary><b>About the algorithm </b></summary>
     <ol type="1">
         <li>The idea of topological sort is to point out such linear order of vertices
-            that each edge starts from vertex with a less number and leads to a vertex with a bigger number</li>
+            that each edge starts from vertex with a less number and leads to a vertex with a bigger number
+        </li>
         <ul>
             <li>Looping through each node of the graph initiating a depth-first search</li>
-            <li>Once a vertex has been entered: </li>
+            <li>Once a vertex has been entered:</li>
             <ul>
                 <li>If it hasn't been visited yet, colour it in grey</li>
                 <li>Initiate dfs from all neighbours</li>
                 <li>If a vertex has no neighbours, colour it in black and put in stack</li>
             </ul>
-            <li>By the end of dfs vertices are being pulled from stack. </li>
+            <li>By the end of dfs vertices are being pulled from stack.</li>
         </ul>
         <li> Vertices are given new numbers in order of pulling
             from stack
@@ -30,7 +31,7 @@
 <canvas id="marks" height="100" width="1280">marks</canvas>
 <canvas id="canv" height='550' width="1280">canvas</canvas>
 <div>
-    <label for="vertexNum">Add more vertices: </label><input id="vertexNum" value="0">
+    <label for="vertexNum">Add more vertices (up to 4): </label><input id="vertexNum" value="0">
     <button id="generate">GENERATE</button>
 </div>
 <div>
@@ -435,7 +436,8 @@
     function isVertexMoved(point1, point2) {
         return point1.x > point2.x && point1.y || point1.y > point2.y
     }
-
+    
+    //animated process of putting a vertex in stack
     function moveToStack(vertex) {
         //we use a copy of vertex's characteristics in coordinates[] in order not to change default coordinates
         movingVertex = cloneMap(coordinates[vertex]);
@@ -457,6 +459,7 @@
         }, updateFrequency)
     }
 
+    //queue of actions to be made
     function processOrder() {
         var timer = setInterval(function () {
                 if (isPaused && !nextStep && !finished) return;
