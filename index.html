@@ -346,10 +346,6 @@
         return Math.sqrt(Math.pow((point1.x - point2.x), 2) + Math.pow((point1.y - point2.y), 2))
     }
 
-    /**function isVertexMoved(point1, point2) {
-        return point1.x >= point2.x && point1.y || point1.y >= point2.y
-    }*/
-
     //clears canvas for redrawing
     function clearCanvas(ctx, canv) {
         ctx.fillStyle = "#66cc00";
@@ -436,7 +432,7 @@
     function isVertexMoved(point1, point2) {
         return point1.x > point2.x && point1.y || point1.y > point2.y
     }
-    
+
     //animated process of putting a vertex in stack
     function moveToStack(vertex) {
         //we use a copy of vertex's characteristics in coordinates[] in order not to change default coordinates
