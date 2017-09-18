@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<h1 align="center"><font face="Comic Sans MS" color="#ff6666">Algorithm of topological sorting in a directed acyclic
+<h1 align="center"><font face="Comic Sans MS" color="#66cc00">Algorithm of topological sorting in a directed acyclic
     graph</font></h1>
 <details>
     <summary><b>About the algorithm </b></summary>
@@ -48,8 +48,8 @@
     var ctx = canv.getContext("2d");
     var marks = document.getElementById("marks")
     var ctx_marks = marks.getContext("2d");
-    ctx.fillStyle = "#ff6666";
-    ctx_marks.fillStyle = "#ff6666";
+    ctx.fillStyle = "#66cc00";
+    ctx_marks.fillStyle = "#66cc00";
     ctx.fillRect(0, 0, 1280, 670);
     var speed = document.getElementById("speed");
     var startButton = document.getElementById("start");
@@ -351,7 +351,7 @@
 
     //clears canvas for redrawing
     function clearCanvas(ctx, canv) {
-        ctx.fillStyle = "#ff6666";
+        ctx.fillStyle = "#66cc00";
         ctx.fillRect(0, 0, canv.width, canv.height);
     }
 
